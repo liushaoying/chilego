@@ -6,7 +6,7 @@
                                                               border-radius: 4px; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}
     .button2{background-color: #4286f4;}
     p1{font-size: 1.5rem;font-family: fantasy;text-align: left;}
-    body {background-image: url('/untitled1/pictrue/background2.png');background-repeat: no-repeat;background-attachment: fixed;
+    body {background-image: url('/chilego/pictrue/background2.png');background-repeat: no-repeat;background-attachment: fixed;
         background-size: cover;}
     #test {color:#333;text-align: left; margin-left: 400px;}    /*通常状态颜色，该值是深灰色*/
     </style></head><body> <h1>CHILEGO_Task 1</h1>
@@ -17,9 +17,23 @@
     <p>3.You'll see each other's drawing on your board at the same time</p>
     <p>4.Check if this is the stroke you think</p>
 </div>
-<p><img src="/untitled1/pictrue/mu.png" alt="Pulpit rock" width="400" height="400"></p>
-<p><a href="/untitled1/html/Task1.html"><button class="button">Review</button></a>
-    <a href="/untitled1/html/Task3.html"><button class="button">Start Task2</button></a>
+<p><img src="/chilego/pictrue/tian.png" alt="Pulpit rock" width="400" height="400"></p>
+<script language="JavaScript">
+    function download() {
+        var b=new Date().toLocaleDateString()+"/"+ new Date().toLocaleTimeString();//获取当前日期
+        var blob = new Blob([b], {type: "text/plain"});
+        var anchor = document.createElement("a");
+        anchor.download = "Task2_tian.txt";
+        anchor.href = window.URL.createObjectURL(blob);
+        anchor.target = "_blank";
+        anchor.style.display = "none"; // just to be safe!
+        document.body.appendChild(anchor);
+        anchor.click();
+        document.body.removeChild(anchor);
+    }
+</script>
+<p><a href="/chilego/html/Task1_tian.html"><button class="button">Review</button></a>
+    <a href="/chilego/html/Task3_tian.html"><button class="button" onclick="download()">Start Task2</button></a>
 </p>
 </body>
 </html>
